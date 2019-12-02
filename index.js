@@ -1,12 +1,12 @@
-console.log("Initializing server...");
+//console.log("Initializing server...");
 
 var PORT = process.env.PORT || 8080;
 var isLocal = process.env.PORT ? false : true;
-console.log("Running in " + (isLocal ? "local " : "deployed ") + "mode");
+//console.log("Running in " + (isLocal ? "local " : "deployed ") + "mode");
 
 var logger;
 if(!isLocal){
-    console.log("Initializing logging...");
+    //console.log("Initializing logging...");
     var winston = require('winston');
     require('winston-papertrail').Papertrail;
 
@@ -68,6 +68,10 @@ app.get("/w", (req, res, next) => {
         result.push(getRandomWord());
     }
     res.json(result);
+});
+
+app.get('/', (req, res) => {
+    res.sendFile('./index.html', { root: __dirname });
 });
 
 logger.info('Server started at port '+PORT);
