@@ -1,29 +1,9 @@
-//console.log("Initializing server...");
-
 var PORT = process.env.PORT || 8080;
 var isLocal = process.env.PORT ? false : true;
-//console.log("Running in " + (isLocal ? "local " : "deployed ") + "mode");
 
-var logger;
-if(!isLocal){
-    //console.log("Initializing logging...");
-    var winston = require('winston');
-    require('winston-papertrail').Papertrail;
+var logger = {};
+logger.info = (a) => {console.log(a);};
 
-    logger = winston.createLogger({
-        transports : [
-            new winston.transports.Papertrail({
-                host: 'logs5.papertrailapp.com',
-                port: 11708
-            })
-        ]
-    });
-
-    logger.info('Logging started');
-}else{
-    logger = {};
-    logger.info = (a) => {console.log(a);};
-}
 
 
 logger.info('Loading Words Sync...');

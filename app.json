@@ -2,6 +2,5 @@
     "name": "Random Words API",
     "description": "Random Words API using Node and Express",
     "repository": "https://github.com/SacuL/RandomWordsAPI",
-    "logo": "https://node-js-sample.herokuapp.com/node.png",
     "keywords": ["node", "express", "api"]
   }
