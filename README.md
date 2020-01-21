@@ -8,7 +8,12 @@ Deploy a free copy of this API:
 ## Get Random Words
 
 Request: /w?n=3
+
 Response: ["music","butter","brook"]
+
+## Why
+
+Well, this is not some production ready high performance API. I build it because I needed some random words for a fun project and could not find a simple API avaible. So here you go, free for everyone to use or host it yourself.
 
 ## Words source
 
