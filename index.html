@@ -2,6 +2,10 @@
 <head>
     <style>
         #forkongithub a{background:#000;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#c11;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}
+        #container{
+            width: 75%;
+            margin: 0 auto;
+        }
         #footer{
             margin-top: 100px;
             font-size: small;
@@ -12,29 +16,31 @@
 </head>
 <body>
     <span id="forkongithub"><a href="https://github.com/SacuL/RandomWordsAPI/">Fork me on GitHub</a></span>
-    <h3 style="text-align: center;">Random words API</h3>
-    <p>Get a list of random words from a dictionary</p>
-    <ul>
-        <li>
-            /w : Get random words
-            <p>
-                Params:
-                <ul>
-                    <li>
-                        n (optional, default = 10)
-                        <p>
-                            Number of words to return
-                        </p>
-                    </li>
-                </ul>
-            </p>
-            <p>
-                Example:
-                <pre>/w?n=3</pre>
-                <pre>Response: ["music","butter","brook"]</pre>
-            </p>
-        </li>
-    </ul>
+    <div id="container">
+        <h3 style="text-align: center;">Random words API</h3>
+        <p>Get a list of random words from a dictionary</p>
+        <ul>
+            <li>
+                /w : Get random words
+                <p>
+                    Params:
+                    <ul>
+                        <li>
+                            n (optional, default = 10)
+                            <p>
+                                Number of words to return
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Example:
+                    <p><a href="/w?n=3">/w?n=3</a></p>
+                    <pre>Response: ["music","butter","brook"]</pre>
+                </p>
+            </li>
+           </ul>
+        <div id="container">
     <p id="footer">Made by Lucas Cerqueira @<a href="https://github.com/SacuL/RandomWordsAPI/">GitHub</a></p>
 </body>
 </html>

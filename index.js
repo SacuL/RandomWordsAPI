@@ -1,25 +1,8 @@
 var PORT = process.env.PORT || 8080;
 var isLocal = process.env.PORT ? false : true;
 
-var logger;
-if(!isLocal){
-    var winston = require('winston');
-    require('winston-papertrail').Papertrail;
-
-    logger = winston.createLogger({
-        transports : [
-            new winston.transports.Papertrail({
-                host: 'logs5.papertrailapp.com',
-                port: 11708
-            })
-        ]
-    });
-
-    logger.info('Logging started');
-}else{
-    logger = {};
-    logger.info = (a) => {console.log(a);};
-}
+var logger = {};
+logger.info = (a) => {console.log(a);};
 
 
 logger.info('Loading Words Sync...');
@@ -50,8 +33,12 @@ function getRandomWord(){
 var compression = require('compression');
 var express = require('express');
 var app = express();
+var cors = require('cors');
+
+app.use(cors());
 app.use(compression());
 app.listen(PORT);
+
 
 app.get("/w", (req, res, next) => {
     let number_of_words = req.query.n || 10;
