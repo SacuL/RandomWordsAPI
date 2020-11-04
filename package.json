@@ -10,7 +10,6 @@
         "path": "^0.12.7",
         "winston": "^3.2.1",
         "winston-papertrail": "^1.0.5",
-        "cors" : "^2.8.5"
-
+        "cors": "^2.8.5"
     }
 }
