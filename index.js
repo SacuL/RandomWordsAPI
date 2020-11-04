@@ -33,8 +33,12 @@ function getRandomWord(){
 var compression = require('compression');
 var express = require('express');
 var app = express();
+var cors = require('cors');
+
+app.use(cors());
 app.use(compression());
 app.listen(PORT);
+
 
 app.get("/w", (req, res, next) => {
     let number_of_words = req.query.n || 10;
